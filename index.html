@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<title>China Xpress</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="styles/w3.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+		<link rel="shortcut icon" type="image/x-icon" href="images/icon.png" />
+		<style>
+			body,h1,h5 {font-family: "Raleway", sans-serif}
+			body, html {height: 100%}
+			.bgimg {
+				background-image: url("images/Streetview.png");
+				min-height: 100%;
+				background-position: center;
+				background-size: cover;
+			}
+			.alignCenter {
+				max-width:100%;
+				height:100%;
+				text-align:center;
+				vertical-align:baseline;
+			}
+			.crimson {
+				<!--color:#8B0000!important-->
+				color:#fff!important;background-color:#8B0000!important
+			}
+			.text-crimson{
+				color:#8B0000!important
+			}
+		</style>
+	</head>
+
+	<body class="w3-sand">
+		
+		<!-- Top -->
+		<div class="bgimg w3-display-container w3-text-white">
+			<div class="w3-display-middle w3-jumbo">
+				<p>China Xpress</p>
+			</div>
+			<div class="w3-display-topleft w3-container w3-xlarge">
+				<p><button onClick="document.getElementById('menu').scrollIntoView();" class="w3-button crimson">Menu</button></p>
+				<p><button onClick="document.getElementById('location&hours').scrollIntoView();" class="w3-button crimson">Location &amp Hours</button></p>
+				<p><button onClick="window.open('https://www.chinaxpressct.com/', '_blank');" class="w3-button crimson">Order Online</button></p>
+			</div>
+		</div>
+		<!-- End Top -->
+
+		<!-- Menu -->
+		<h1 id="menu" align="center">Menu</h1>
+		<p class="alignCenter"><img class="alignCenter" src="images/Menu1.jpg" alt="Menu1"></p>
+		<p class="alignCenter"><img class="alignCenter" src="images/Menu2.jpg" alt="Menu2"></p>
+		<p class="alignCenter"><img class="alignCenter" src="images/Menu3.jpg" alt="Menu3"></p>
+		<p class="alignCenter"><img class="alignCenter" src="images/Menu4.jpg" alt="Menu4"></p>
+		<!-- End Menu -->
+		
+		&nbsp;
+		
+		<!-- Location&Hours -->
+		<h1 id="location&hours" class="w3-xxlarge" align="center">Location &amp Hours</h1>
+		<!-- Map -->
+		<div id="googleMap" style="width:100%;height:400px;"></div>
+		<script>
+			function myMap() {
+				var myLatLng = new google.maps.LatLng(41.04080659999999,-73.55442060000001);
+				
+				var map = new google.maps.Map(document.getElementById("googleMap"), {
+					center: myLatLng,
+					zoom:19
+				});
+				
+				var marker = new google.maps.Marker({
+					position: myLatLng,
+					map: map,
+					title: "China Xpress"
+				});
+			}
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAr1DMgHDxrDeP_mRtJ1Nl2AWzSo5LsYgs&callback=myMap"></script>
+		<!-- End Map -->
+		
+		&nbsp;
+		
+		<!-- Contact -->
+		<div id="contact">
+			<table class="w3-table" align="center" style="width:80%">
+				<tr>
+					<th>Address</th>
+					<th>Opening Hours</th> 
+					<th>Contact</th>
+				</tr>
+				<tr>
+					<td>170 Selleck St Unit A, Stamford, CT 06902</td>
+					<td>Mon-Thur: 11:00am - 11:00pm</td> 
+					<td>Tel: (203)-406-7977</td>
+				</tr>
+				<tr>
+					<td>&nbsp</td>
+					<td>Fri-Sat: 11:00am - 12:00am</td> 
+				</tr>
+				<tr>
+					<td>&nbsp</td>
+					<td>Sun: 12:00pm - 11:00pm</td>
+				</tr>
+			</table>
+		</div>
+		<!-- End Contact -->
+		<!-- End Location&Hours -->
+		
+		<!-- Copyright -->
+		<p style="float:left">Content copyright <script type='text/javascript'>document.write(new Date().getFullYear());</script>. 
+			China Xpress Chinese Restaurant. All rights reserved.</p>
+		<p style="float:right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+		<div style="clear: both;"></div>
+		<!-- End Copyright -->
+
+	</body>
+	
+</html>
+
